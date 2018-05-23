@@ -1,6 +1,8 @@
-#Install docker
+##################Install docker##################
 
-#How to create docker for ubuntu 
+Somes dockers commands : https://xataz.developpez.com/tutoriels/utilisation-docker/#LVI-D-2
+
+###################How to create docker for ubuntu ##################
 
 
 $ sudo apt-get remove docker docker-engine docker.io
@@ -32,11 +34,26 @@ $ sudo apt-get install docker-ce
 $ sudo docker run hello-world
 
 
-# install hadoop 2.7.0
+################### install hadoop 2.7.0##################
 
 $ sudo docker pull sequenceiq/hadoop-docker:2.7.0 .
 
 $ sudo docker run -it sequenceiq/hadoop-docker:2.7.0 /etc/bootstrap.sh -bash
+
+###################Install hbase ##################
+
+$ docker pull dajobe/hbase
+
+$ mkdir data
+
+$ id=$(docker run --name=hbase-docker -h hbase-docker -d -v $PWD/data:/data dajobe/hbase)
+
+$ ./start-hbase.sh
+
+################### Start Docker ##################
+
+$ systemctl start docker
+$ systemctl enable docker
 
 
 
