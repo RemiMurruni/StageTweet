@@ -30,3 +30,13 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce
 
 $ sudo docker run hello-world
+
+
+# install hadoop 2.7.0
+
+$ sudo docker pull sequenceiq/hadoop-docker:2.7.0 .
+
+$ sudo docker run -it sequenceiq/hadoop-docker:2.7.0 /etc/bootstrap.sh -bash
+
+
+
