@@ -1,0 +1,24 @@
+#Install hadoop
+#how to install hadoop
+
+// Great video about hadoop on ubuntu :
+// https://www.youtube.com/watch?v=Y6oit3rCsZo
+// https://ricma.co/install-apache-hadoop-27-on-buntu-1604.html
+// https://www.tutorialspoint.com/hbase/hbase_installation.htm
+
+// localhost:50070 for the hadoop overview. Nodes etc...
+
+// directory of hadoop configuration files : /usr/local/hadoop/etc/hadoop
+
+
+
+********AT every reboot need to start again HDFS and Yarn***********************
+$ start-dfs.sh
+$ start-yarn.sh
+********************************************************************************
+
+***********To check if everything is ok*****************************************
+$ hdfs namenode -format
+********************************************************************************
+
+
