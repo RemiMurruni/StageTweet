@@ -1,7 +1,7 @@
-##################Install docker##################
+##################Install docker###############################################################################################
 Somes dockers commands : https://xataz.developpez.com/tutoriels/utilisation-docker/#LVI-D-2
 https://dyrk.org/2017/06/09/docker-creer-des-images-dockers-en-toute-simplicite-et-hors-ligne/
-###################How to create docker for ubuntu ##################
+###################How to create docker for ubuntu #################################################################################
 
 
 $ sudo apt-get remove docker docker-engine docker.io
@@ -16,12 +16,12 @@ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 $ sudo apt-key fingerprint 0EBFCD88 // (to check the key) 
 
-*************************************************************************
+*************************************************************************************************************************************
 pub   4096R/0EBFCD88 2017-02-22
       Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
 uid                  Docker Release (CE deb) <docker@docker.com>
 sub   4096R/F273FCD8 2017-02-22
-**************************************************************************
+**************************************************************************************************************************************
 
 
 $ sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu    artful    stable"
@@ -33,13 +33,13 @@ $ sudo apt-get install docker-ce
 $ sudo docker run hello-world
 
 
-################### install hadoop 2.7.0##################
+################### install hadoop 2.7.0########################################################################################
 
 $ sudo docker pull sequenceiq/hadoop-docker:2.7.0 .
 
 $ sudo docker run -it sequenceiq/hadoop-docker:2.7.0 /etc/bootstrap.sh -bash
 
-###################Install hbase ##################
+###################Install hbase ######################################################################################################
 
 $ docker pull dajobe/hbase
 
@@ -49,10 +49,12 @@ $ id=$(docker run --name=hbase-docker -h hbase-docker -d -v $PWD/data:/data dajo
 
 $ ./start-hbase.sh
 
-################### Start Docker ##################
+################### Start Docker ######################################################################################################
 
 $ systemctl start docker
 $ systemctl enable docker
 
-
+############### Connect to a container ###############################################################################################################
+$ sudo docker exec -it [container] bash 
+##############################################################################################################################
 
