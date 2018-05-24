@@ -10,7 +10,7 @@
 
 // directory of hadoop configuration files : /usr/local/hadoop/etc/hadoop
 
-
+To acces to hadoop : id = hduser mdp = **********
 
 ********AT every reboot need to start again HDFS and Yarn***********************
 $ start-dfs.sh
