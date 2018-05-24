@@ -56,5 +56,20 @@ $ systemctl enable docker
 
 ############### Connect to a container ###############################################################################################################
 $ sudo docker exec -it [container] bash 
-##############################################################################################################################
+
+################# To build and run an image in a container#############################################################################################################
+
+$ sudo docker build . (if you are in your current folder)
+$ sudo docker build path/to/your/folder (if you need to specifie your folder)
+
+Sending build context to Docker daemon 2.048kB
+step 1/2 : FROM alpine
+ ---> firstID
+step 2/2 : 2nd line 
+etc ....
+Successfully built ContainerID
+
+$ sudo docker run --name YourNhoosedName ContainerId
+
+##################################################################################################################################################################
 
